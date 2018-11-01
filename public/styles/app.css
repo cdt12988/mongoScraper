@@ -1,0 +1,145 @@
+body {
+	background-image: url(https://fivethirtyeight.com/wp-content/uploads/2017/08/rangers1.jpg?quality=90&strip=info&w=575&ssl=1);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: aliceblue;
+}
+.page-container {
+	display: grid;
+	grid:
+		"header" 15vh
+		"main" 85vh
+		/ 100vw;
+}
+
+.page-header {
+	grid-area: header;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-left: 5%;
+}
+.page-header h1 {
+	font-family: 'Abril Fatface', cursive;
+	font-size: 3em;
+	color: lightskyblue;
+	padding: 1em 0;
+}
+.articles-container {
+	grid-area: main;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	text-align: center;
+	
+	width: 90%;
+	margin: 0 auto;
+}
+.articles-container section {
+	width: 100%;
+	outline: 1px solid rgba(255, 255, 255, 0.75);
+	display: flex;
+/* 	justify-content: flex-start; */
+	align-items: center;
+	padding: 1em;
+}
+.article {
+	justify-content: flex-start;
+	margin-top: 1em;
+	position: relative;
+	background: rgba(0, 0, 0, 0.65);
+}
+.note-container {
+	width: 50%;
+	max-height: 100vh;
+	overflow: auto;
+	background: rgba(0, 0, 0, 0.65);
+/*
+	background: rgba(25, 25, 112, 0.65);
+	background: rgba(135, 206, 250, 0.7);
+*/
+	border-radius: 1em;
+}
+.note-container textarea {
+	margin: 1.5em auto;
+	padding: 1em;
+	width: 90%;
+	height: 100%;
+	min-width: 300px;
+	min-height: 200px;
+	
+	font-size: 1.25em;
+}
+.submit-note {
+	padding: 1em 1.5em;
+	margin-bottom: 1.5em;
+	background: rgba(178, 34, 34, 0.72);
+	border-radius: 1em;
+	color: aliceblue;
+	font-size: 1.25em;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+.submit-note:hover,
+.submite-note:focus {
+	color: midnightblue;
+	background: rgba(178, 34, 34, 0.9);
+}
+.note {
+/* 	margin-bottom: 1em; */
+	display: flex;
+	flex-flow: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: rgba(255, 255, 255, 0.75);
+	background: rgba(135, 206, 250, 0.75);
+	color: black;
+}
+
+.logo {
+	max-width: 100px;
+	margin-left: 1em;
+	position: absolute;
+	left: 0;
+/* 	margin-right: 1em; */
+}
+.headline-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.headline-container h2,
+.headline-container a {
+	width: 100%;
+	padding: 0.5em;
+}
+.headline-container h2 {
+	font-family: 'Concert One', cursive;
+	font-size: 1.5em;
+}
+.headline-container a {
+	color: lightskyblue;
+	text-decoration: none;
+}
+.headline-container a:hover {
+	text-decoration: underline;
+}
+.show-note {
+	cursor: pointer;
+}
+.show-note:hover {
+	color: lightgray;
+}
+
+.js-hidden {
+	display: none !important;
+}

@@ -1,0 +1,32 @@
+{{> header }}
+	
+	<div class="page-container">
+		<header class="page-header">
+			<h1>Ranger Headlines</h1>
+		</header>
+		<main>
+			<div class="articles-container">
+				{{#each articles}}
+					<section class="article">
+						<img class="logo" alt="Texas Rangers Logo" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Texas_Rangers_logo.png">
+						<div class="headline-container">
+							<h2>{{this.headline}}</h2>
+							<a href="{{this.link}}" target="_blank">{{this.link}}</a>
+							<div class="show-note" data-id="{{this._id}}">Show Notes</div>
+						</div>
+					</section>
+					<section id="{{this._id}}" class="note js-hidden">
+						<div class="note-container">
+
+							<form>
+								<textarea id="body-{{this._id}}" placeholder="Add Note...">{{this.note.body}}</textarea>
+								<input class="submit-note" type="submit" data-articleid="{{this._id}}" value="Save Note">
+							</form>
+						</div>
+					</section>
+				{{/each}}
+			</div>
+		</main>
+	</div>
+	
+{{> footer }}

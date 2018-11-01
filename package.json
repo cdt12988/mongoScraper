@@ -1,0 +1,28 @@
+{
+  "name": "mongoscraper",
+  "version": "1.0.0",
+  "description": "Allows users to view web-scraped articles and attach data-persistent notes to them.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdt12988/mongoScraper.git"
+  },
+  "author": "Cody Thompson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdt12988/mongoScraper/issues"
+  },
+  "homepage": "https://github.com/cdt12988/mongoScraper#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.3.7",
+    "morgan": "^1.9.1"
+  }
+}
